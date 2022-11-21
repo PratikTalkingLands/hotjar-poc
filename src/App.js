@@ -4,14 +4,15 @@ import './App.css';
 import { hotjar } from 'react-hotjar';
 
 
-useEffect(()=>{
-  hotjar.initialize(3151496, 6)
-},[])
+
 
 function App() {
   const dataSubmit = () => {
     window.alert("Data Sumbitted Successfully")
   }
+  useEffect(()=>{
+    hotjar.initialize(3151496, 6)
+  },[])
   return (
     <div className="App">
       <h1>This is the POC for implementation of Hotjar</h1>
