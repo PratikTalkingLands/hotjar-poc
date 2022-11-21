@@ -2,7 +2,12 @@ import React from 'react';
 import { useEffect } from 'react';
 import './App.css';
 import { hotjar } from 'react-hotjar';
+import ReactGA from 'react-ga'
 
+const TRACKING_ID = "G-ZYN8X673R4" // Our Tracking ID
+
+
+ReactGA.initialize(TRACKING_ID)
 
 
 
@@ -12,6 +17,10 @@ function App() {
   }
   useEffect(()=>{
     hotjar.initialize(3151496, 6)
+  },[])
+
+  useEffect(()=>{
+    ReactGA.pageview(window.location.pathname)
   },[])
   return (
     <div className="App">
