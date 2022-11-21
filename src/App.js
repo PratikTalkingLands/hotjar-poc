@@ -4,7 +4,7 @@ import './App.css';
 import { hotjar } from 'react-hotjar';
 import ReactGA from 'react-ga'
 
-const TRACKING_ID = "G-ZYN8X673R4" // Our Tracking ID
+const TRACKING_ID = "UA-247182080-1" // Our Tracking ID
 
 
 ReactGA.initialize(TRACKING_ID)
