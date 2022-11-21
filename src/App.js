@@ -1,5 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { hotjar } from 'react-hotjar';
+
+
+hotjar.initialize(3151496, 6);
+
+// Identify the user
+hotjar.identify('USER_ID', { userProperty: 'value' });
+
+// Add an event
+hotjar.event('button-click');
+
+// Update SPA state
+hotjar.stateChange('/');
+
+// Check if Hotjar has been initialized before calling its methods
+if (hotjar.initialized()) {
+  hotjar.identify('USER_ID', { userProperty: 'value' });
+}
 
 function App() {
   const dataSubmit = () => {
